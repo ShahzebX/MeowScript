@@ -1,0 +1,32 @@
+Wake
+
+// Conditional statements example
+Box age paws 3
+Box weight paws 5.2
+
+Purr (age < 2) {
+    Meow("Kitten")
+} Hiss {
+    Meow("Adult cat")
+}
+
+Purr (weight > 5.0) {
+    Meow("Heavy cat!")
+}
+
+Purr (age >= 2 && weight < 6.0) {
+    Meow("Perfect size cat")
+} Hiss {
+    Meow("Different size cat")
+}
+
+// Nested conditionals
+Purr (age < 5) {
+    Purr (weight < 4.0) {
+        Meow("Small young cat")
+    } Hiss {
+        Meow("Large young cat")
+    }
+}
+
+Sleep

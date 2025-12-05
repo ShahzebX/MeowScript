@@ -1,0 +1,52 @@
+Wake
+
+// Factorial calculation using recursion
+Hunt factorial(n) {
+    Purr (n <= 1) {
+        Bring 1
+    } Hiss {
+        Box temp paws n - 1
+        Box prev_factorial paws factorial(temp)
+        Box result paws n * prev_factorial
+        Bring result
+    }
+}
+
+// Fibonacci calculation
+Hunt fibonacci(n) {
+    Purr (n <= 1) {
+        Bring n
+    } Hiss {
+        Box a paws n - 1
+        Box b paws n - 2
+        Box fib_a paws fibonacci(a)
+        Box fib_b paws fibonacci(b)
+        Box result paws fib_a + fib_b
+        Bring result
+    }
+}
+
+// Test factorial
+Meow("Factorials:")
+Box i paws 0
+Chase (i <= 5) {
+    Box fact paws factorial(i)
+    Meow(i)
+    Meow("! = ")
+    Meow(fact)
+    i paws i + 1
+}
+
+// Test fibonacci
+Meow("Fibonacci sequence:")
+Box j paws 0
+Chase (j <= 7) {
+    Box fib paws fibonacci(j)
+    Meow("F(")
+    Meow(j)
+    Meow(") = ")
+    Meow(fib)
+    j paws j + 1
+}
+
+Sleep

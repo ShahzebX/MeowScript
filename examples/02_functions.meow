@@ -1,0 +1,32 @@
+Wake
+
+// Function example
+Hunt greet(name) {
+    Meow("Hello, ")
+    Meow(name)
+    Meow("!")
+    Bring "Done"
+}
+
+Hunt add(a, b) {
+    Bring a + b
+}
+
+Hunt multiply(x, y) {
+    Box result paws x * y
+    Bring result
+}
+
+// Call functions
+greet("Fluffy")
+greet("Whiskers")
+
+Box sum paws add(15, 27)
+Meow("15 + 27 = ")
+Meow(sum)
+
+Box product paws multiply(6, 7)
+Meow("6 * 7 = ")
+Meow(product)
+
+Sleep

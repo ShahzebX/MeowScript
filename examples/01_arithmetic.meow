@@ -1,0 +1,14 @@
+Wake
+
+// Simple arithmetic example
+Box x paws 10
+Box y paws 20
+Box sum paws x + y
+Meow("Sum: ")
+Meow(sum)
+
+Box product paws x * y
+Meow("Product: ")
+Meow(product)
+
+Sleep

@@ -1,0 +1,34 @@
+Wake
+
+// Loop examples
+Box counter paws 0
+
+Meow("Counting to 5:")
+Chase (counter < 5) {
+    Meow(counter)
+    counter paws counter + 1
+}
+
+Meow("Done counting!")
+
+// Another loop - sum numbers
+Box i paws 1
+Box sum paws 0
+Chase (i <= 10) {
+    sum paws sum + i
+    i paws i + 1
+}
+
+Meow("Sum of 1 to 10: ")
+Meow(sum)
+
+// Countdown loop
+Box countdown paws 5
+Meow("Countdown:")
+Chase (countdown > 0) {
+    Meow(countdown)
+    countdown paws countdown - 1
+}
+Meow("Blast off!")
+
+Sleep

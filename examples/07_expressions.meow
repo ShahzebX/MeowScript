@@ -1,0 +1,49 @@
+Wake
+
+// String operations
+Box greeting paws "Hello"
+Box target paws "Fluffy"
+Box message paws greeting + " " + target + "!"
+Meow(message)
+
+Box cat_name paws "Whiskers"
+Box description paws "The cat " + cat_name + " is cute"
+Meow(description)
+
+// Mixing strings and numbers
+Box age paws 3
+Box weight paws 4.5
+
+Box info paws cat_name + " is " + age + " years old"
+Meow(info)
+
+Box detail paws "Weight: " + weight + " kg"
+Meow(detail)
+
+// Complex expressions
+Box x paws 10
+Box y paws 20
+Box z paws 5
+
+Box result1 paws x + y * z
+Meow("10 + 20 * 5 = ")
+Meow(result1)
+
+Box result2 paws (x + y) * z
+Meow("(10 + 20) * 5 = ")
+Meow(result2)
+
+Box result3 paws x * y / z
+Meow("10 * 20 / 5 = ")
+Meow(result3)
+
+// Logical expressions
+Box is_young paws age < 5
+Box is_light paws weight < 5.0
+Box is_cute paws is_young && is_light
+
+Purr (is_cute == 1) {
+    Meow("Cat is young and light - very cute!")
+}
+
+Sleep

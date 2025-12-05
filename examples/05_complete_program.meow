@@ -1,0 +1,70 @@
+Wake
+
+// Complete cat tracking program
+Hunt calculate_cat_age(years) {
+    Box human_years paws years * 7
+    Bring human_years
+}
+
+Hunt needs_food(weight, min_weight) {
+    Purr (weight < min_weight) {
+        Bring 1
+    } Hiss {
+        Bring 0
+    }
+}
+
+Hunt check_health(age, weight) {
+    Box ideal_weight paws age * 1.5
+    
+    Purr (weight < ideal_weight - 1.0) {
+        Bring "Underweight"
+    } Hiss {
+        Purr (weight > ideal_weight + 1.0) {
+            Bring "Overweight"
+        } Hiss {
+            Bring "Healthy"
+        }
+    }
+}
+
+// Main program
+Box cat_name paws "Fluffy"
+Box age paws 3
+Box weight paws 4.8
+
+Meow("=== Cat Health Tracker ===")
+Meow("Cat Name: ")
+Meow(cat_name)
+Meow("Age: ")
+Meow(age)
+Meow("Weight: ")
+Meow(weight)
+
+Box human_age paws calculate_cat_age(age)
+Meow("Human equivalent age: ")
+Meow(human_age)
+
+Box ideal_weight paws age * 1.5
+Box health_status paws check_health(age, weight)
+Meow("Health Status: ")
+Meow(health_status)
+
+Box food_check paws needs_food(weight, ideal_weight)
+Purr (food_check == 1) {
+    Meow("Cat needs more food!")
+} Hiss {
+    Meow("Cat is well-fed")
+}
+
+// Track feeding schedule
+Box day paws 1
+Meow("=== Weekly Feeding Schedule ===")
+Chase (day <= 7) {
+    Meow("Day ")
+    Meow(day)
+    Meow(": Feed 2 times")
+    day paws day + 1
+}
+
+Sleep
